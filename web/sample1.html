@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>FakeOS</title>
+	
+    <!-- ============= -->
+    <!-- JS            -->
+    <!-- ============= -->
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+    <!--  Utilities -->
+	<script src="js/Util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/BgBlinker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/TypeWriter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Capturador.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Automata -->
+	<!--  Not used in this sample
+	<script src="js/AtmLine.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/AtmLineShowDiv.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/AtmLineTypeDiv.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/AtmLineBlinker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/AtmLineAuto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/AtmLineAutoStartTypeWriter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Atm.js" type="text/javascript" charset="utf-8"></script>
+	-->
+	
+	<!-- Desktop -->
+	<script src="js/Desktop.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- APPS -->
+    <script src="js/app/AppWindow.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app/AppVideoMail.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app/AppVideoChat.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app/AppTextChat.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- MAIN  -->
+	<script src="samples/js/sample1.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- ============= -->
+    <!-- CSS           -->
+    <!-- ============= -->
+    <link href="css/fakeOS.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css">
+/* --------------------- */
+/* DESKTOP               */
+/* --------------------- */
+#escritorio  {
+    position:absolute;
+    background-color:black;
+    width:1440px;
+    height:600px;
+}
+
+/* --------------------- */
+/* DOCK                  */
+/* --------------------- */
+#dock {
+	background-image:url(samples/img/dock_bg.png);
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	position:fixed;
+	bottom:50px;
+	width:1440px;
+	height:100px;
+}
+/* Icons in the dock */
+#iconVideomail {
+	left:611px;
+	background-image: url(samples/img/iconVideomail.png);
+}
+#iconChat {
+	left:700px;
+	background-image:url(samples/img/iconChat.png);
+}
+
+/* ===================== */
+/* APPLICATIONS          */
+/* ===================== */
+/* Application's buttons */
+.buttons {
+   border: 1px solid red;
+   margin: 5px;
+}
+
+/* --------------------- */
+/* VIDEOMAIL             */
+/* --------------------- */
+/* Main window */
+#videomail {
+    top:20px;
+    left:20px;
+}
+/* Visor where should go the image */
+#videoVisor {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: white;
+}
+/* Buttons */
+#videomail .buttons {
+    width: 200px;
+}
+
+/* --------------------- */
+/* CHAT                  */
+/* --------------------- */
+/* Main window */
+#chat {
+    top:20px;
+    left:320px;
+    width: 200px;
+    height: 100px;
+}
+	</style>
+	
+</head>
+<!--  body is the desktop -->
+<body class="full" id="escritorio">
+    <p>
+    In this first sample whe have a dock with two applications
+    </p>
+
+    <!-- Dock -->
+    <div id="dock">
+        <div id="iconVideomail" class="appIcon"></div>
+        <div id="iconChat"      class="appIcon"></div>
+    </div>
+    
+    <!--  ========================================= -->
+    <!--  Here, hidden, we put the HTML for our apps -->
+    <!--  ========================================= -->
+    <!-- VideoMail -->
+    <div id="videomail" class="appWindow" style="display: none;">
+        <h1>Video Mail</h1>
+        <div id="x_videomail" class="btnClose"></div>
+        <div id="videoVisor">
+        Here could be an embedded video simulating a video conference.<br/>
+        By code, this video could start when the application is opened.
+        </div>
+        <div class="buttons">
+        Here we could put application's buttons.<br/>
+        It could be a background image or clickable elements, launching some actions. 
+        </div>
+    </div>
+    
+    <!-- Chat -->
+    <div id="chat" class="appWindow" style="display: none;">
+        <h1>Chat</h1>
+        <div id="x_chat" class="btnClose"></div>
+    </div>
+</body>
+</html>
