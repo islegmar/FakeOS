@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+
+#explanation {
+    width: 300px;
+    color:white;
+    position: relative;
+    top: 0x;
+    float: right;
+    padding: 15px;
+    font-size: 18px;	
+}
+
+/* --------------------- */
+/* DESKTOP               */
+/* --------------------- */
+#escritorio  {
+    position:absolute;
+    background-color:black;
+    width:100%;
+    height:100%;
+}
+
+/* --------------------- */
+/* DOCK                  */
+/* --------------------- */
+#dock {
+    background-image:url(../img/dock_bg.png);
+    background-position:left bottom;
+    background-repeat:no-repeat;
+    position:fixed;
+    bottom:50px;
+    width:1440px;
+    height:100px;
+}
+/* Icons in the dock */
+#iconVideomail {
+    left:611px;
+    background-image: url(../img/iconVideomail.png);
+}
+#iconChat {
+    left:700px;
+    background-image:url(../img/iconChat.png);
+}
+
+/* ===================== */
+/* APPLICATIONS          */
+/* ===================== */
+/* Application's buttons */
+.buttons {
+   border: 1px solid red;
+   margin: 5px;
+}
+
+/* --------------------- */
+/* VIDEOMAIL             */
+/* --------------------- */
+/* Main window */
+#videomail {
+    top:20px;
+    left:20px;
+}
+/* Visor where should go the image */
+#videoVisor {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: white;
+}
+/* Buttons */
+#videomail .buttons {
+    width: 200px;
+}
+
+/* --------------------- */
+/* CHAT                  */
+/* --------------------- */
+/* Main window */
+#chat {
+    top:20px;
+    left:320px;
+    width: 200px;
+    height: 100px;
+}
