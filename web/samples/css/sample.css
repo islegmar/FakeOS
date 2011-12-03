@@ -78,6 +78,13 @@
 #chat {
     top:20px;
     left:320px;
-    width: 200px;
-    height: 100px;
+    width: 320px;
+    height: 320px;
+}
+
+#chatArea {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    margin: 5px;
 }

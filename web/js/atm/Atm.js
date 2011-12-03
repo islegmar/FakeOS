@@ -26,13 +26,14 @@ Atm.prototype.exec = function(event) {
         // Obtenemos la línea a ejecutar
         var atmLine = this.lines[this.currState];
         
-        // Movemos el autómata al siguiente estado
-        ++this.currState;
-        
         // Ejecutamos la acción
         atmLine.exec();
         
-        while ( this.lines[this.currState+1] instanceof AtmLineAuto ) {
+        // Movemos el autómata al siguiente estado
+        ++this.currState;
+        
+        // Si la siguiente acción es automática, la ejecuto
+        if ( this.lines[this.currState] instanceof AtmLineAuto ) {
         	this.exec();
         }
     // Muestro líneas de manera secuencial     

@@ -15,7 +15,17 @@
 	<script src="js/TypeWriter.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/Capturador.js" type="text/javascript" charset="utf-8"></script>
 	
-	<!-- Desktop -->
+    <!-- Automata -->
+    <script src="js/atm/AtmLine.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineAuto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineShowApp.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineShowDiv.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineTypeDiv.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineBlinker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/AtmLineAutoStartTypeWriter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/atm/Atm.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- Desktop -->
 	<script src="js/Desktop.js" type="text/javascript" charset="utf-8"></script>
     
     <!-- APPS -->
@@ -24,7 +34,7 @@
     <script src="js/app/AppTextChat.js" type="text/javascript" charset="utf-8"></script>
     
     <!-- MAIN  -->
-	<script src="samples/js/sample1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="samples/js/sample2.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- ============= -->
     <!-- CSS           -->
@@ -35,10 +45,12 @@
 <!--  body is the desktop -->
 <body class="full" id="escritorio">
     <div id="explanation">
-    <b>SAMPLE #1</b><br/> 
-    In this first sample we have a dock with two clickable applications (video@ and chat) that
-    are shown when clicking in the corresponding icon.<br/>
-    Both applications have a close button (x).
+    <b>SAMPLE #2</b><br/>
+    In this sample we use automatization.<br>
+    <ul>
+    <li>Click ENTER and the first action is launched : the chat application is opened.</li>
+    <li>Press any key several times and the the TypeWriter action is execute: a valid message is shown in the chat.</li>
+    </ul> 
     </div>
 
     <!-- Dock -->
@@ -50,24 +62,11 @@
     <!--  ========================================= -->
     <!--  Here, hidden, we put the HTML for our apps -->
     <!--  ========================================= -->
-    <!-- VideoMail -->
-    <div id="videomail" class="appWindow" style="display: none;">
-        <h1>Video Mail</h1>
-        <div id="x_videomail" class="btnClose"></div>
-        <div id="videoVisor">
-        Here could be an embedded video simulating a video conference.<br/>
-        By code, this video could start when the application is opened.
-        </div>
-        <div class="buttons">
-        Here we could put application's buttons.<br/>
-        It could be a background image or clickable elements, launching some actions. 
-        </div>
-    </div>
-    
     <!-- Chat -->
     <div id="chat" class="appWindow" style="display: none;">
         <h1>Chat</h1>
         <div id="x_chat" class="btnClose"></div>
+        <div id="chatArea"></div>
     </div>
 </body>
 </html>
