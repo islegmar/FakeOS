@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>FakeOS - Sample#2</title>
+	
+    <!-- ============= -->
+    <!-- JS            -->
+    <!-- ============= -->
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+
+    <!--  Utilities -->
+	<script src="js/Util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/BgBlinker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/TypeWriter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Capturador.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Desktop -->
+	<script src="js/Desktop.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- APPS -->
+    <script src="js/app/AppWindow.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app/AppVideoMail.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app/AppTextChat.js" type="text/javascript" charset="utf-8"></script>
+    
+    <!-- MAIN  -->
+	<script src="samples/js/sample1.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- ============= -->
+    <!-- CSS           -->
+    <!-- ============= -->
+    <link href="css/fakeOS.css" rel="stylesheet" type="text/css" />
+    <link href="samples/css/sample.css" rel="stylesheet" type="text/css" />
+</head>
+<!--  body is the desktop -->
+<body class="full" id="escritorio">
+    <div id="explanation">
+    <b>SAMPLE #1</b><br/> 
+    In this first sample we have a dock with two clickable applications (video@ and chat) that
+    are shown when clicking in the corresponding icon.<br/>
+    Both applications have a close button (x).
+    </div>
+
+    <!-- Dock -->
+    <div id="dock">
+        <div id="iconVideomail" class="appIcon"></div>
+        <div id="iconChat"      class="appIcon"></div>
+    </div>
+    
+    <!--  ========================================= -->
+    <!--  Here, hidden, we put the HTML for our apps -->
+    <!--  ========================================= -->
+    <!-- VideoMail -->
+    <div id="videomail" class="appWindow" style="display: none;">
+        <h1>Video Mail</h1>
+        <div id="x_videomail" class="btnClose"></div>
+        <div id="videoVisor">
+        Here could be an embedded video simulating a video conference.<br/>
+        By code, this video could start when the application is opened.
+        </div>
+        <div class="buttons">
+        Here we could put application's buttons.<br/>
+        It could be a background image or clickable elements, launching some actions. 
+        </div>
+    </div>
+    
+    <!-- Chat -->
+    <div id="chat" class="appWindow" style="display: none;">
+        <h1>Chat</h1>
+        <div id="x_chat" class="btnClose"></div>
+    </div>
+</body>
+</html>
